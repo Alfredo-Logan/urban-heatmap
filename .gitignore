@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+.env
+venv/
+
+# Poetry
+.pytest_cache/
+
+# IDE
+.vscode
