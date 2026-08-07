@@ -1,12 +1,9 @@
 {
-  "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "jsx": "react-jsx",
-    "types": [
-      "vitest/globals",
-      "@testing-library/jest-dom"
-    ]
-  },
-  "include": ["src/**/*"]
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "jsx": "react-jsx",
+        "types": ["vitest/globals", "@testing-library/jest-dom"]
+    },
+    "include": ["src/**/*"]
 }
