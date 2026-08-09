@@ -8,3 +8,6 @@
 *.njsproj
 *.sln
 *.sw?
+
+# Pre-commit related
+.ruff_cache/
