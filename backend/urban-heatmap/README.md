@@ -15,7 +15,7 @@ Verify the installation with `poetry --version`
 1. Clone the repo:
 ```bash
    git clone https://github.com/Alfredo-Logan/urban-heatmap
-   cd backend
+   cd backend/urban-heatmap/src/urban_heatmap
 ```
 
 2. Install dependencies:
