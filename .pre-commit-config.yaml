@@ -30,6 +30,7 @@ repos:
     # Ruff version
     rev: v0.12.2
     hooks:
+    # TODO: add argument `--cache-dir, backend/.ruff_cache` to args array for both check & format
       - id: ruff-check
         # arg[1] keeps all fixes in one commit instead of having a separate commit for "apply ruff fixes"
         args: [--fix, --exit-non-zero-on-fix]
