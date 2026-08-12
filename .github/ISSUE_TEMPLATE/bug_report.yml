@@ -1,0 +1,38 @@
+name: Bug Report
+description: File a bug report
+title: "[BUG]: "
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for filling out a report!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Please fill out sections to better understand how to fix the issue
+      value: |
+        ## Describe the Bug
+        <!-- A clear and concise description of what the bug is. -->
+
+        ## Steps to Reproduce
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+
+        ## Expected Behavior
+        <!-- A clear and concise description of what you expected to happen. -->
+
+        ## Environment Details
+        - OS: [e.g. iOS, Windows]
+        - Browser: [e.g. Chrome, Safari]
+        - Version: [e.g. 22]
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant error or log output. This will be automatically formatted into code, no need for backticks
+      render: shell
