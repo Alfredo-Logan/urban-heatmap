@@ -1,7 +1,10 @@
+import Map from "./components/Map";
+
 function App() {
     return (
-        <main className="bg-amber-500">
-            <h1>Welcome to HeatMap!</h1>
+        <main className="flex flex-col items-center">
+            <h1>Urban HeatMap</h1>
+            <Map />
         </main>
     );
 }
