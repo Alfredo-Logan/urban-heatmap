@@ -27,7 +27,7 @@ function Map() {
     }
 
     return (
-        <div className="h-[300px] w-[600px] border border-gray-400 rounded-lg overflow-hidden">
+        <div className="m-auto h-75 w-full max-w-150 border border-gray-400 rounded-lg overflow-hidden">
             <MapContainer
                 className="h-full w-full"
                 center={position}
