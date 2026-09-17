@@ -27,9 +27,9 @@ function Map() {
     }
 
     return (
-        <div className="m-auto h-75 w-full max-w-150 border border-gray-400 rounded-lg overflow-hidden">
+        <div className="h-full self-stretch md:mt-0 md:my-8">
             <MapContainer
-                className="h-full w-full"
+                className="h-full w-full border border-gray-400 rounded-lg"
                 center={position}
                 zoom={13}
                 scrollWheelZoom={true}
