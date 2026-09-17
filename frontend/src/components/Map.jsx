@@ -1,16 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 function Map() {
     const [position, setPosition] = useState(null);
     const [error, setError] = useState(null);
-    const isRequested = useRef(false); // used to work around strict mode calling for location twice
 
-    // used to get location data asynchronously from Geolocation API
     useEffect(() => {
-        if (isRequested.current) return;
-        isRequested.current = true;
-
         navigator.geolocation.getCurrentPosition(
             (position) => {
                 setPosition([position.coords.latitude, position.coords.longitude]);
@@ -18,6 +13,11 @@ function Map() {
             (err) => {
                 console.error(err);
                 setError("Could not fetch location.");
+            },
+            {
+                enableHighAccuracy: false,
+                timeout: 30000,
+                maximumAge: 60000,
             }
         );
     }, []);
