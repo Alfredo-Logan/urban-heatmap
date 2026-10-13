@@ -10,11 +10,28 @@ describe("App Component", () => {
 
     it("displays loading message while waiting for geolocation", () => {
         navigator.geolocation.getCurrentPosition.mockImplementationOnce(() => {});
-
         render(<App />);
 
         const loadingElement = screen.getByText(/loading user location\.\.\./i);
         expect(loadingElement).toBeInTheDocument();
+    });
+
+    it("displays error text when location can't be found", () => {
+        vi.spyOn(navigator.geolocation, "getCurrentPosition").mockImplementationOnce(
+            (successCallback, errorCallback) => {
+                errorCallback({
+                    code: 1,
+                    message: "User denied Geolocation",
+                });
+            }
+        );
+
+        render(<App />);
+
+        screen.getByText(/could not fetch location./i);
+        expect(screen.queryByTestId("mock-marker")).not.toBeInTheDocument();
+
+        vi.restoreAllMocks();
     });
 
     it("renders map component", () => {
