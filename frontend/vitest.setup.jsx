@@ -37,7 +37,7 @@ vi.mock("react-leaflet", () => ({
 // mock geolocation call & successful response
 const mockGetCurrentPosition = vi.fn((success) =>
     success({
-        coords: { latitude: 41.45, longitude: -82.02 },
+        coords: { latitude: 51.500786, longitude: -0.124681 },
     })
 );
 
